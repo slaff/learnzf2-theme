@@ -1,0 +1,34 @@
+{
+	"name": "learnzf2/theme",
+	"description": "Theme module that allows you to have different themes in your ZF2 applicaiton",
+	"keywords": [
+	      "zf2",
+	      "learn",
+	      "book",
+	      "theme"
+	 ],
+	"homepage": "http://learnzf2.com/themes-in-zend-framework-2/",
+	"authors": [
+	            {
+	                "name": "Slavey Karadzhov",
+	                "email": "slaff@linux-bg.org",
+	                "homepage": "http://zf2consulting.com",
+	                "role": "Author"
+	            }
+	],
+	"require": {
+		"php": ">=5.3.3",
+        "zendframework/zendframework": "2.*"
+	},
+	"autoload": {
+        "psr-0": {
+            "Theme\\": "src/"
+        },
+        "classmap": [
+            "Module.php"
+        ]
+    },
+    "suggest": {
+        "learnzf2/example-theme": "Short example for a theme module in ZF2"
+    }
+}

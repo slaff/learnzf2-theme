@@ -1,0 +1,24 @@
+<?php 
+
+if(!count($this->list)) {
+    echo "No themes are available at the moment!";
+}
+else {
+    foreach ($this->list as $name => $theme) {
+?>
+<div class="thumbnail">
+    Name: <?php echo $this->escapehtml($name) ?><br>
+    Description: <?php echo $this->escapehtml($theme['description']) ?><br>
+    <?php if(isset($theme['screenshot'])) { ?>
+    Screenshot: <img src="<?php echo $this->escapehtml($theme['screenshot']) ?>"/><br>
+    <?php 
+          }    
+          if($name != $current) { 
+    ?>
+    <a href="<?php echo $this->url('theme/change', array( 'theme'=> $this->escapehtml($name))) ?>" class="btn btn-primary">Activate</a>
+    <?php } ?>
+</div>
+<?php         
+    }
+}
+?>
