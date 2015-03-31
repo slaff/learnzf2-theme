@@ -10,7 +10,10 @@ class ThemeStorageInvokable
 {
     public function get()
     {
-        return $_COOKIE['theme'];
+        if(isset($_COOKIE['theme']))
+            return $_COOKIE['theme'];
+        else   
+            $this->set('default');
     }
 
     public function set($name)
